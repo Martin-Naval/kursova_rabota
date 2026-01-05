@@ -8,18 +8,18 @@ void showCategory(char *filename) {
         return;
     }
 
-    char names[50][50];     // масив за имената
-    long populations[50];   // масив за популациите
+    char names[50][50];    
+    long populations[50];   
     int count = 0;
 
-    // Четене на животните от файла
+   
     while (fscanf(file, "%49s %ld", names[count], &populations[count]) == 2) {
         count++;
     }
 
     fclose(file);
 
-    // Показване на списък
+    
     printf("\nМоля избери животно:\n");
     for (int i = 0; i < count; i++) {
         printf("%d. %s\n", i + 1, names[i]);
